@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: url('images/background_2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding-block: 100px;
+  background: #F0E6DD;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  height: 80%;
+  display:flex;
+  flex-direction: column;
+}
+
+.input_zone {
+  padding: 5px;
+  background-color: #efca88;
+  border-radius: 4px;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add_btn {
+  background: none;
+  border: none;
+  color: #ffff00;
+  font-size: 40px;
+  width: auto;
+  cursor: pointer;
+  padding: 0;
+}
+
+.add_btn:hover {
+  background-color:  var(--transparent-bg);
+  color: #cccc00;
+}
+
+h1 {
+  text-align: center;
+}
+
+input[type="text"] {
+  margin-right: 5px;
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: auto;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Style for the Complete button */
+.complete-btn {
+  background: none;
+  border: none;
+  color: #00ff00;
+  font-size: 20px;
+  width: auto;
+  cursor: pointer;
+  padding: 0;
+}
+
+.complete-btn:hover {
+  background-color:  var(--transparent-bg);
+  color: #00cc00;
+}
+
+/* Style for the Change button */
+.change-btn {
+  background: none;
+  border: none;
+  color: #CC7930;
+  font-size: 20px;
+  width: auto;
+  cursor: pointer;
+  padding: 0;
+}
+
+.change-btn:hover {
+  background-color:  var(--transparent-bg);
+  color: #AF682A;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff0000;
+  font-size: 20px;
+  width: auto;
+  cursor: pointer;
+  padding: 0;
+}
+
+.delete-btn:hover {
+  background-color:  var(--transparent-bg);
+  color: #cc0000;
+}
