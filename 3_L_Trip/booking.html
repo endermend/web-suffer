@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./booking.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="booking">
+      <h1>Забронируйте свое путешествие!</h1>
+      <form action="#" method="get" class="form-example">
+        <label>
+            Ваше имя:
+            <input required type="text">
+        </label>
+        <label>
+            <h>Ваш email:</h>
+            <input required type="email">
+        </label>
+        <label>
+            Тип путешествия:
+            <select>
+                <option>Пляжный отдых</option>
+                <option>Экскурсионный тур</option>
+                <option>Приключения</option>
+                <option>Круиз</option>
+            </select>
+        </label>
+        <label>
+            Количество путешественников:
+            <input type="number" step="1" min="1" max="10" placeholder="1">
+        </label>
+        <label>
+            Дата начала путешествия:
+            <input type="date">
+        </label>
+        <label>
+            Ваши пожелания:
+            <textarea rows="4"></textarea>
+        </label>
+        <p>
+            Я согласен на обработку моих персональных данных.
+            <input type="checkbox">
+        </p>
+      </form>
+      <button>Забронировать</button>
+    </div>
+</body>
+</html>

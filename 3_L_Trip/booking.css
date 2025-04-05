@@ -1,0 +1,53 @@
+body {
+    background-image: url(https://i.pinimg.com/originals/74/c3/3a/74c33a69195510d437d27367dd6d9e3b.jpg);
+    display: flex;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    height: 95vh;  
+    justify-content: space-evenly;
+    font-family: bahnschrift light;
+    font-size: large;
+}
+
+.booking {
+  box-shadow: 0 1rem 100rem 1rem rgba(0, 0, 0, 0.8);
+  background-color: rgba(251, 227, 201, 0.9);
+  padding: 2rem;
+  border-radius: 2rem;
+  width: max(500px,30%);
+  padding-top:6rem;
+  padding-bottom:6rem;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+
+button {
+  margin-top: 20px;
+  font: large bahnschrift light;
+  padding: 0.7rem;
+  border-radius: 2rem;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+    background-color: rgba(180, 147, 222);
+}
+
+input[type="checkbox"] {
+    background-color: white;
+}
+
+label{
+  margin-bottom:20px;
+  display: flex;
+}
+
+label > input:not([type = "checkbox"]), select, textarea {
+  padding: 0.6rem;
+  border-radius: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
