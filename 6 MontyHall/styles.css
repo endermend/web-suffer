@@ -1,0 +1,197 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.doors-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.door {
+  width: 120px;
+  height: 200px;
+  position: relative;
+  cursor: pointer;
+  perspective: 800px;
+}
+
+.door-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.door-front {
+  width: 100%;
+  height: 100%;
+  background-color: #8B4513;
+  color: white;
+  border: 4px solid #5D2906;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  backface-visibility: hidden;
+  transform-origin: left center;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+}
+
+.door-back {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+  color: #333;
+  border: 4px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.door-back img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.game-state {
+  display: none;
+}
+
+.door:hover .door-inner {
+  transform: rotateY(-20deg);
+}
+
+#door1:checked ~ .doors-container .door-2 .door-inner,
+#door2:checked ~ .doors-container .door-3 .door-inner,
+#door3:checked ~ .doors-container .door-2 .door-inner {
+  transform: rotateY(-180deg);
+}
+
+#final-reveal:checked ~ .doors-container .door .door-inner {
+  transform: rotateY(-180deg);
+}
+
+#door1:checked ~ .doors-container .door:hover .door-inner,
+#door2:checked ~ .doors-container .door:hover .door-inner,
+#door3:checked ~ .doors-container .door:hover .door-inner,
+#final-reveal:checked ~ .doors-container .door:hover .door-inner {
+  transform: rotateY(-20deg);
+}
+
+.game-state {
+  display: none;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.btn-switch {
+  background-color: #2196F3;
+}
+
+.btn-switch:hover {
+  background-color: #0b7dda;
+}
+
+.btn-reset {
+  background-color: #f44336;
+}
+
+.btn-reset:hover {
+  background-color: #da190b;
+}
+
+.message {
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+#game-start:checked ~ .initial-message {
+  display: block;
+  background-color: #e7f3fe;
+  border-left: 6px solid #2196F3;
+}
+
+#door1:checked ~ .after-choice-message,
+#door2:checked ~ .after-choice-message,
+#door3:checked ~ .after-choice-message {
+  display: block;
+  background-color: #fff3cd;
+  border-left: 6px solid #ffc107;
+}
+
+#final-reveal:checked ~ .final-message {
+  display: block;
+  background-color: #d4edda;
+  border-left: 6px solid #28a745;
+}
+
+label.btn {
+  display: inline-block;
+}
+
+.result-message {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: none;
+}
+
+.win-message {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.lose-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}

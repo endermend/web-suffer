@@ -11,7 +11,7 @@ body {
 
 .business-card {
   width: 750px;
-  height: 400px;
+  height: calc(auto + 40px);
   background: #5E6B41;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -100,6 +100,7 @@ body {
 .card-info {
   display:flex;
   width:100%;
+  gap: 10px;
   justify-content: space-between;
   flex-direction: column;
 }

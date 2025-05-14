@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Монти Холл (CSS-only)</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Монти Холл</h1>
+        <p>Выберите дверь, чтобы начать игру</p>
+        
+        <input type="radio" name="game" id="game-start" class="game-state" checked>
+        <input type="radio" name="game" id="door1" class="game-state">
+        <input type="radio" name="game" id="door2" class="game-state">
+        <input type="radio" name="game" id="door3" class="game-state">
+        <input type="radio" name="game" id="final-reveal" class="game-state">
+        
+        <div class="message initial-message">
+            Выберите одну из трех дверей. За одной из них находится приз!
+        </div>
+        
+        <div class="message after-choice-message">
+            Я открыл одну из дверей с козой. Хотите изменить свой выбор?
+        </div>
+        
+        <div class="message final-message">
+            Игра завершена! Вот что было за дверями.
+        </div>
+        
+        <div class="doors-container">
+            <div class="door door-1">
+                <label for="door1">
+                    <div class="door-inner">
+                        <div class="door-front">Дверь 1</div>
+                        <div class="door-back">
+                            <img src="https://avatars.mds.yandex.net/i?id=6d4f63396753cdc950fa7db880cd00b2bdd5c283-10696341-images-thumbs&n=13" alt="Автомобиль">
+                            <div>Автомобиль!</div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            
+            <div class="door door-2">
+                <label for="door2">
+                    <div class="door-inner">
+                        <div class="door-front">Дверь 2</div>
+                        <div class="door-back">
+                            <img src="https://avatars.mds.yandex.net/i?id=8897d1a94f13e5d6536d59661461fdc482973ffd-8229244-images-thumbs&n=13" alt="Коза">
+                            <div>Коза</div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            
+            <div class="door door-3">
+                <label for="door3">
+                    <div class="door-inner">
+                        <div class="door-front">Дверь 3</div>
+                        <div class="door-back">
+                            <img src="https://avatars.mds.yandex.net/i?id=8897d1a94f13e5d6536d59661461fdc482973ffd-8229244-images-thumbs&n=13" alt="Коза">
+                            <div>Коза</div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <label for="final-reveal" class="btn btn-switch">Изменить выбор</label>
+            <label for="final-reveal" class="btn">Оставить выбор</label>
+            <label for="game-start" class="btn btn-reset">Начать заново</label>
+        </div>
+        
+        <div id="win-message" class="result-message win-message">
+            Поздравляем! Вы выбрали правильную дверь и выиграли автомобиль!
+        </div>
+        
+        <div id="lose-message" class="result-message lose-message">
+            К сожалению, вы выбрали не ту дверь. Попробуйте ещё раз!
+        </div>
+        
+        <div class="instructions">
+            <h3>Как играть:</h3>
+            <ol style="text-align: left; max-width: 600px; margin: 0 auto;">
+                <li>Наведите на дверь, чтобы увидеть эффект приоткрывания</li>
+                <li>Выберите одну из трех дверей</li>
+                <li>Я открою одну из оставшихся дверей с козой</li>
+                <li>Решите, хотите ли вы изменить свой выбор</li>
+                <li>Узнайте, выиграли ли вы автомобиль!</li>
+            </ol>
+        </div>       
+    </div>
+</body>
+</html>
